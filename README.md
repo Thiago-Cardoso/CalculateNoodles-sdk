@@ -1,44 +1,74 @@
+# The CalculateNoodles-sdk Ruby gem
+
+<p>
+  <a href="https://github.com/Thiago-Cardoso/CalculateNoodles-sdk">
+    <img alt="Current Version" src="https://img.shields.io/badge/version-1.0.0 -blue.svg">
+  </a>
+  <a href="https://ruby-doc.org/core-2.7">
+    <img alt="Ruby Version" src="https://img.shields.io/badge/Ruby-2.7 -green.svg" target="_blank">
+  </a>
+</p>
+
 # CalculateNoodles
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/CalculateNoodles`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
+Calculation of cooking time for instant noodles problem.
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'CalculateNoodles'
+gem 'CalculateNoodles', :git =>'git://github.com/Thiago-Cardoso/CalculateNoodles-sdk.git' 
+
 ```
 
 And then execute:
 
-    $ bundle
+$ bundle install
 
-Or install it yourself as:
 
-    $ gem install CalculateNoodles
+## Usage Example
 
-## Usage
+**CalculateNoodles (Calculation of cooking time for instant noodles problem)**
 
-TODO: Write usage instructions here
+```ruby
+@time_cook: 3
+@time_hourglass_one: 5
+@time_hourglass_two: 7
+CalculateNoodles::Calculate.new(@time_cook, @time_hourglass_one, @time_hourglass_two).calculate_time
+```
 
-## Development
+## Running tests
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+CalculateNoodles-sdk uses Rspec as test framework.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+- Running all tests:
+
+```bash
+rspec spec
+```
+
+- Running tests for an specific file:
+
+```bash
+rspec spec/CalculateNoodles_spec.rb
+```
+
+## Supported Ruby Versions
+
+This library aims to support and is the following Ruby versions:
+
+- Ruby 2.6
+- Ruby 2.7
+
+## Authors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+[<img src="https://avatars1.githubusercontent.com/u/1753070?s=460&v=4" width="100px;"/><br /><sub><b>Thiago Cardoso</b></sub>](https://github.com/Thiago-Cardoso)<br />
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/CalculateNoodles. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/Thiago-Cardoso/CalculateNoodles-sdk.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the CalculateNoodles project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/CalculateNoodles/blob/master/CODE_OF_CONDUCT.md).
-# CalculateNoodles-sdk
