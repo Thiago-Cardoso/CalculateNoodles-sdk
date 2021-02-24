@@ -30,10 +30,10 @@ $ bundle install
 **CalculateNoodles (Calculation of cooking time for instant noodles problem)**
 
 ```ruby
-@time_cook: 3
-@time_hourglass_one: 5
-@time_hourglass_two: 7
-CalculateNoodles::Calculate.new(@time_cook, @time_hourglass_one, @time_hourglass_two).calculate_time
+time_cook: 3
+time_hourglass_one: 5
+time_hourglass_two: 7
+CalculateNoodles::Calculate.new(time_cook, time_hourglass_one, time_hourglass_two).calculate_time
 ```
 
 ## Running tests
