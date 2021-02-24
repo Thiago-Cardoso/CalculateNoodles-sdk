@@ -4,15 +4,14 @@ MAX_MULTIPLIER = 500
 module CalculateNoodles
   class Error < StandardError; end
     class Calculate
-        attr_accessor :time_cook, :time_hourglass_one, :time_hourglass_two
+    attr_accessor :time_cook, :time_hourglass_one, :time_hourglass_two
 
     def initialize(time_cook = nil, time_hourglass_one = nil,time_hourglass_two = nil)
       @time_cook = time_cook.to_i
       @time_hourglass_one = time_hourglass_one.to_i
       @time_hourglass_two = time_hourglass_two.to_i
     end
-
-
+    
     def compare(time_cook, time_hourglass_one, time_hourglass_two)
       if ((time_hourglass_one - time_hourglass_two).abs == time_cook)
           return [time_hourglass_one, time_hourglass_two].max
