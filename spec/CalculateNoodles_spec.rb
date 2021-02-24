@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 RSpec.describe CalculateNoodles do
-  subject { CalculateNoodles::Calculate.new }
   it 'has a version number SDK' do
     expect(CalculateNoodles::VERSION).not_to be nil
   end
@@ -14,17 +13,20 @@ RSpec.describe CalculateNoodles do
      end
 
       it "test time_cook 3 = 10 && calculate is (5 + 5) - 7" do
-        expect(subject.calculate_time(@time_cook,@time_hourglass_one,@time_hourglass_two)).to eql(10)
+        subject = CalculateNoodles::Calculate.new(@time_cook,@time_hourglass_one,@time_hourglass_two).calculate_time 
+        expect(subject).to eql(10)
       end
 
       it "test time_cook 1 = 15 && calculate is 5 + 5 + 5 - (7 + 7)" do
         @time_cook = 1
-        expect(subject.calculate_time(@time_cook,@time_hourglass_one,@time_hourglass_two)).to eql(15)
+        subject = CalculateNoodles::Calculate.new(@time_cook,@time_hourglass_one,@time_hourglass_two).calculate_time 
+        expect(subject).to eql(15)
       end
 
       it "test time_cook 7 = 7" do
         @time_cook = 7
-        expect(subject.calculate_time(@time_cook,@time_hourglass_one,@time_hourglass_two)).to eql(7)
+        subject = CalculateNoodles::Calculate.new(@time_cook,@time_hourglass_one,@time_hourglass_two).calculate_time 
+        expect(subject).to eql(7)
       end
    end
 
@@ -36,7 +38,8 @@ RSpec.describe CalculateNoodles do
     end
 
       it "return msg alert time invalid" do
-        expect(subject.calculate_time(@time_cook,@time_hourglass_one,@time_hourglass_two)).to eql('It is not possible to cook at the right time')
+        subject = CalculateNoodles::Calculate.new(@time_cook,@time_hourglass_one,@time_hourglass_two).calculate_time 
+        expect(subject).to eql('It is not possible to cook at the right time')
       end
    end
 
@@ -48,7 +51,8 @@ RSpec.describe CalculateNoodles do
     end
 
       it "test time_cook 3 = 3" do
-        expect(subject.calculate_time(@time_cook,@time_hourglass_one,@time_hourglass_two)).to eql(3)
+        subject = CalculateNoodles::Calculate.new(@time_cook,@time_hourglass_one,@time_hourglass_two).calculate_time 
+        expect(subject).to eql(3)
       end
    end
 end
