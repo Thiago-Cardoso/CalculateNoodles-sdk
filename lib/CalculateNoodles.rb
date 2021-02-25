@@ -18,14 +18,16 @@ module CalculateNoodles
       end
       return 0
     end
+
     def hourglass_one
       (1..MAX_MULTIPLIER).each do |i|
           if (@time_hourglass_one * i == @time_cook || @time_hourglass_two * i == @time_cook)
               return @time_cook
           end
       end
-      return false
+       false
     end
+
     def hourglass_two
       (1..MAX_MULTIPLIER).each do |i|
           (1..MAX_MULTIPLIER).each do |j|
@@ -33,7 +35,7 @@ module CalculateNoodles
               return res if res > 0
           end
       end
-      return false
+       false
     end
 
     def calculate_time
